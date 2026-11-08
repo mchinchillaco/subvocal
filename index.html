@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- ===== 1. CABECERA DEL DOCUMENTO (HEAD) ===== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Subvocal: el dispositivo que convierte en texto las palabras que pronuncias en silencio, sin emitir ningún sonido.">
+    <title>Subvocal · Escribir hablando en silencio</title>
+
+    <!-- Tipografías de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Hoja de estilos (único CSS del trabajo) -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<!-- ===== 2. MENÚ SUPERIOR ===== -->
+<body>
+
+    <header class="cabecera">
+        <a href="#inicio" class="logo">Sub<span>vocal</span></a>
+        <nav class="menu" aria-label="Menú principal">
+            <ul>
+                <li><a href="#que-es">Qué es</a></li>
+                <li><a href="#novedad">Novedad</a></li>
+                <li><a href="#por-que">Por qué</a></li>
+                <li><a href="#funcionamiento">Cómo funciona</a></li>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#evolucion">Evolución</a></li>
+                <li><a href="#limitaciones">Limitaciones</a></li>
+                <li><a href="#mas-info">Más info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== 3. PORTADA (HERO) ===== -->
+    <main>
+
+        <section id="inicio" class="hero">
+            <div class="hero-texto">
+                <p class="etiqueta">Lanzado el 30 de octubre de 2026</p>
+                <h1>Sub<span class="degradado">vocal</span></h1>
+                <p class="subtitulo">Escribe en tu ordenador moviendo los labios, sin emitir ni un solo sonido.</p>
+                <div class="hero-botones">
+                    <a href="#novedad" class="boton">¿Por qué es novedoso?</a>
+                    <a href="#funcionamiento" class="boton boton-secundario">Cómo funciona</a>
+                </div>
+            </div>
+            <figure class="hero-imagen">
+                <img src="subvocal-dispositivo.jpg" alt="El dispositivo Subvocal, con forma de montura de gafas">
+                <figcaption>Imagen: The Subvocal Company</figcaption>
+            </figure>
+        </section>
+
+        <!-- ===== 4. QUÉ ES ===== -->
+        <section id="que-es" class="seccion">
+            <p class="antetitulo">01 · El dispositivo</p>
+            <h2>¿Qué es Subvocal?</h2>
+            <div class="dos-columnas">
+                <div class="texto">
+                    <p><strong>Subvocal</strong> es un dispositivo de <strong>habla silenciosa</strong>: convierte en texto las palabras que pronuncias moviendo la boca, pero <strong>sin voz</strong>. Lo ha creado The Subvocal Company, una startup de San Francisco fundada en 2026 por dos estudiantes de informática de Georgia Tech, Aarush Yadav y Arnav Kumar.</p>
+                    <p>Tiene forma de montura de gafas, pero <strong>no son unas gafas inteligentes</strong>: la montura solo sirve para colocar los sensores junto a la cara. No lleva cámaras: su función es convertir el habla silenciosa en texto y en órdenes para el ordenador.</p>
+                    <p>Está pensado para los momentos en los que no puedes hablar en voz alta ni usar el teclado con comodidad: una oficina abierta, el tren, una biblioteca o una reunión.</p>
+                    <blockquote class="destacado">
+                        Los proyectos de habla silenciosa más conocidos, como AlterEgo o EchoSpeech, nunca llegaron a venderse. Subvocal ya se puede reservar.
+                    </blockquote>
+                </div>
+                <figure class="foto">
+                    <img src="subvocal-uso.jpg" alt="Una persona lleva puesto el Subvocal mientras escribe en su ordenador sin hablar">
+                    <figcaption>El usuario mueve los labios en silencio y el texto aparece en el ordenador. Imagen: The Subvocal Company</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ===== 5. POR QUÉ ES NOVEDOSO ===== -->
+        <section id="novedad" class="seccion seccion-alterna">
+            <p class="antetitulo">02 · Lo que lo hace único</p>
+            <h2>¿Por qué es algo novedoso?</h2>
+            <p class="intro">La idea de «hablar sin voz» con un ordenador lleva más de veinte años investigándose, pero los proyectos más conocidos <strong>nunca llegaron a venderse</strong>. Subvocal es un producto totalmente nuevo: es el primero de una empresa nacida en 2026, no es la versión mejorada de ningún aparato anterior y usa una forma de detectar el habla, las ondas de radio, que los proyectos anteriores no empleaban.</p>
+
+            <div class="novedades">
+                <article class="novedad">
+                    <h3>Primero a la venta</h3>
+                    <p class="antes"><span>Antes</span> Los sistemas de habla silenciosa se quedaban en anuncios, laboratorios y prototipos de investigación.</p>
+                    <p class="ahora"><span>Ahora</span> Cualquiera puede reservarlo desde el 30 de octubre de 2026.</p>
+                </article>
+                <article class="novedad">
+                    <h3>Ondas de radio, sin cámaras ni electrodos</h3>
+                    <p class="antes"><span>Antes</span> Había que pegar electrodos en la cara o grabar la boca con cámaras y ecógrafos.</p>
+                    <p class="ahora"><span>Ahora</span> Emite ondas de radio de baja potencia que atraviesan la cara y detectan cómo se mueven la lengua, los labios y el paladar.</p>
+                </article>
+                <article class="novedad">
+                    <h3>Texto libre, no órdenes sueltas</h3>
+                    <p class="antes"><span>Antes</span> El prototipo con gafas más conocido, EchoSpeech, reconocía como mucho 31 órdenes.</p>
+                    <p class="ahora"><span>Ahora</span> Escribe cualquier frase, con una velocidad que la empresa sitúa por encima de 200 palabras por minuto.</p>
+                </article>
+                <article class="novedad">
+                    <h3>Listo en un minuto</h3>
+                    <p class="antes"><span>Antes</span> Los sistemas con electrodos solían necesitar ajustes para cada persona e incluso para cada sesión.</p>
+                    <p class="ahora"><span>Ahora</span> Basta con leer unas 20 frases para calibrarlo la primera vez.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== 6. POR QUÉ LO HE ELEGIDO ===== -->
+        <section id="por-que" class="seccion">
+            <p class="antetitulo">03 · Beneficios para la IPO</p>
+            <h2>¿Por qué lo he elegido?</h2>
+            <p class="intro">Lo he elegido porque abre un <strong>canal de entrada nuevo</strong> entre la persona y el ordenador. No es un teclado más rápido ni un micrófono mejor, sino una tercera vía que mezcla lo mejor de ambos.</p>
+            <div class="tarjetas">
+                <article class="tarjeta">
+                    <span class="icono">01</span>
+                    <h3>La velocidad de la voz</h3>
+                    <p>Según sus creadores, la mayoría de la gente teclea a unas 40–50 palabras por minuto, mientras que hablando se llega a 120–200. Subvocal busca esa velocidad sin necesidad de voz.</p>
+                </article>
+                <article class="tarjeta">
+                    <span class="icono">02</span>
+                    <h3>La discreción del teclado</h3>
+                    <p>Como no hay sonido, no molestas a nadie ni compartes lo que escribes con quien está al lado. Es el gran problema de los asistentes de voz que resuelve.</p>
+                </article>
+                <article class="tarjeta">
+                    <span class="icono">03</span>
+                    <h3>Manos libres</h3>
+                    <p>Se puede escribir mientras las manos están ocupadas o lejos del teclado.</p>
+                </article>
+                <article class="tarjeta">
+                    <span class="icono">04</span>
+                    <h3>El usuario tiene el control</h3>
+                    <p>Solo interpreta las palabras que pronuncias a propósito: no lee el pensamiento ni está siempre escuchando.</p>
+                </article>
+                <article class="tarjeta">
+                    <span class="icono">05</span>
+                    <h3>Una interacción natural</h3>
+                    <p>No hay que aprender gestos ni atajos: basta con «hablar» como siempre, pero sin voz.</p>
+                </article>
+                <article class="tarjeta">
+                    <span class="icono">06</span>
+                    <h3>Pensado para la era de la IA</h3>
+                    <p>Permite escribir mensajes largos a los asistentes de inteligencia artificial en cualquier lugar, sin teclear ni hablar en voz alta.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== 7. CÓMO FUNCIONA ===== -->
+        <section id="funcionamiento" class="seccion seccion-alterna">
+            <p class="antetitulo">04 · Funcionamiento</p>
+            <h2>¿Cómo funciona?</h2>
+            <ol class="pasos">
+                <li><strong>Pronuncias en silencio.</strong> Mueves la boca como si hablaras, pero sin emitir sonido.</li>
+                <li><strong>Las ondas lo detectan.</strong> El dispositivo emite ondas de radio de baja potencia, parecidas a las del Bluetooth, que cambian al moverse la lengua, los labios y el paladar.</li>
+                <li><strong>La IA lo traduce.</strong> Unos modelos de inteligencia artificial, que funcionan en la nube, convierten esa señal en palabras.</li>
+                <li><strong>Aparece el texto.</strong> Las palabras se escriben en el ordenador en menos de medio segundo.</li>
+            </ol>
+
+            <div class="dos-columnas dos-columnas-texto">
+                <div class="caja-info">
+                    <h3>Primer uso: calibración</h3>
+                    <p>La primera vez hay que leer unas 20 frases para que el sistema se adapte a tu forma de articular. Según sus creadores, lleva alrededor de un minuto.</p>
+                </div>
+                <div class="caja-info">
+                    <h3>Modo avanzado: labios cerrados</h3>
+                    <p>Sus creadores aseguran que, con práctica, también funciona con «habla interna», es decir, moviendo solo la lengua con los labios cerrados.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== 8. CARACTERÍSTICAS ===== -->
+        <section id="caracteristicas" class="seccion">
+            <p class="antetitulo">05 · Ficha técnica</p>
+            <h2>Características principales</h2>
+            <div class="tabla-contenedor">
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th>Elemento</th>
+                            <th>Detalle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Tipo</td><td>Dispositivo de entrada por habla silenciosa, en montura de gafas</td></tr>
+                        <tr><td>Tecnología</td><td>Ondas de radio (RF) de baja potencia; sin cámaras ni electrodos</td></tr>
+                        <tr><td>Velocidad</td><td>Más de 200 palabras por minuto, según la empresa</td></tr>
+                        <tr><td>Retardo</td><td>Normalmente menos de 0,5 segundos</td></tr>
+                        <tr><td>Calibración</td><td>Unas 20 frases la primera vez</td></tr>
+                        <tr><td>Idioma</td><td>Solo inglés en el lanzamiento</td></tr>
+                        <tr><td>Conexión</td><td>Necesita Internet: el texto se descifra en la nube</td></tr>
+                        <tr><td>Precio</td><td>499&nbsp;$ en reserva anticipada (precio normal: 699&nbsp;$)</td></tr>
+                        <tr><td>Reserva</td><td>Depósito de 199&nbsp;$ reembolsable; solo envíos a EE.&nbsp;UU.</td></tr>
+                        <tr><td>Disponibilidad</td><td>Reservas desde el 30/10/2026 · envíos previstos en el primer trimestre de 2027</td></tr>
+                        <tr><td>Fabricante</td><td>The Subvocal Company (San Francisco), del programa Y Combinator de otoño de 2026</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ===== 9. EVOLUCIÓN ===== -->
+        <section id="evolucion" class="seccion seccion-alterna">
+            <p class="antetitulo">06 · Historia</p>
+            <h2>¿Cómo ha evolucionado?</h2>
+            <div class="sustituye">
+                <h3>¿A qué sustituye?</h3>
+                <p>Subvocal no tiene versiones anteriores, pero sí viene a sustituir a dos formas de escribir que usamos a diario: el <strong>teclado</strong> (físico o táctil), que es silencioso pero lento, y el <strong>dictado por voz</strong> de los asistentes, que es rápido pero obliga a hablar en voz alta.</p>
+            </div>
+
+            <h3 class="subtitulo-seccion">Del laboratorio a la tienda: la idea de la «voz silenciosa»</h3>
+            <ol class="linea-tiempo">
+                <li>
+                    <span class="fecha">2002</span>
+                    <h3>Un teléfono silencioso</h3>
+                    <p>La operadora japonesa NTT DoCoMo anuncia un móvil silencioso que leía los músculos de la cara (electromiografía) y el movimiento de los labios, con la idea de evitar el ruido en lugares públicos.</p>
+                </li>
+                <li>
+                    <span class="fecha">2004</span>
+                    <h3>Investigación en la NASA</h3>
+                    <p>El centro Ames de la NASA investiga cómo reconocer palabras pronunciadas en silencio a partir de las señales de los músculos del habla.</p>
+                </li>
+                <li>
+                    <span class="fecha">2008 – 2018</span>
+                    <h3>Las gafas de Stephen Hawking</h3>
+                    <p>Cuando el físico dejó de poder usar un pulsador con el dedo, empezó a escribir con un sensor de infrarrojos montado en sus gafas que detectaba el movimiento de su mejilla. Elegía las letras una a una y, en sus últimos años, apenas llegaba a 1 o 2 palabras por minuto.</p>
+                </li>
+                <li>
+                    <span class="fecha">2010 – 2014</span>
+                    <h3>Ecografías, cámaras e imanes</h3>
+                    <p>Los investigadores prueban a «ver» la boca por dentro con ultrasonidos y cámaras, o a seguir la lengua con sensores electromagnéticos. Los resultados son prometedores, pero no salen del laboratorio.</p>
+                </li>
+                <li>
+                    <span class="fecha">2019</span>
+                    <h3>AlterEgo, del MIT</h3>
+                    <p>Un estudio del MIT Media Lab traduce en palabras las señales neuromusculares del habla interna. Sigue sin venderse al público.</p>
+                    <figure class="foto foto-pequena">
+                        <img src="alterego-mit.jpg" alt="Prototipo AlterEgo del MIT Media Lab colocado en la cara y el cuello">
+                        <figcaption>Prototipo AlterEgo. Fuente: MIT Media Lab</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <span class="fecha">2023</span>
+                    <h3>EchoSpeech, de Cornell</h3>
+                    <p>Un prototipo de investigación con forma de gafas usa sonar para reconocer hasta 31 órdenes. Tampoco llega a venderse.</p>
+                </li>
+                <li>
+                    <span class="fecha">Febrero 2026</span>
+                    <h3>Nace la idea de Subvocal</h3>
+                    <p>Yadav y Kumar crean el primer prototipo en el hackathon TreeHacks de la Universidad de Stanford, todavía con electrodos pegados a la cara.</p>
+                </li>
+                <li>
+                    <span class="fecha">Abril 2026</span>
+                    <h3>Primer prototipo portátil</h3>
+                    <p>Un aparato que se colocaba detrás de la oreja y reconocía letra a letra a unas 30 palabras por minuto. Después cambian los electrodos por ondas de radio, lo que permite la montura de gafas.</p>
+                </li>
+                <li class="actual">
+                    <span class="fecha">30 oct. 2026</span>
+                    <h3>Subvocal sale a la venta</h3>
+                    <p>Se abren las reservas: el habla silenciosa pasa del laboratorio a un producto que cualquiera puede encargar.</p>
+                </li>
+            </ol>
+
+            <h3 class="subtitulo-seccion">¿Cómo mejora a lo que había antes?</h3>
+            <div class="tarjetas tarjetas-mejoras">
+                <article class="tarjeta">
+                    <h3>Frente al teclado</h3>
+                    <p>Más rápido y sin necesidad de usar las manos.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Frente al dictado por voz</h3>
+                    <p>Igual de natural, pero silencioso y privado.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Frente a las gafas de Hawking</h3>
+                    <p>Pasa de elegir letra a letra, a 1 o 2 palabras por minuto, a descifrar palabras completas.</p>
+                </article>
+                <article class="tarjeta">
+                    <h3>Frente a EchoSpeech</h3>
+                    <p>Escribe frases completas, no una lista cerrada de órdenes.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== 10. LIMITACIONES ===== -->
+        <section id="limitaciones" class="seccion">
+            <p class="antetitulo">07 · Visión crítica</p>
+            <h2>Limitaciones</h2>
+            <ul class="lista-limitaciones">
+                <li><strong>Sin pruebas independientes:</strong> las cifras de velocidad y precisión las da la propia empresa y todavía nadie las ha comprobado.</li>
+                <li><strong>Solo en inglés y en EE.&nbsp;UU.:</strong> de momento no funciona en español y solo se envía a Estados Unidos.</li>
+                <li><strong>Necesita Internet:</strong> el reconocimiento se hace en la nube, así que no funciona sin conexión.</li>
+                <li><strong>Privacidad por aclarar:</strong> aún no se ha publicado cómo se tratan los datos de los sensores y del habla.</li>
+                <li><strong>Datos por confirmar:</strong> faltan la batería, el peso y la compatibilidad, y la fecha de envío depende de la aprobación de la FCC, el organismo que autoriza los aparatos de radio en EE.&nbsp;UU.</li>
+                <li><strong>Costumbre social:</strong> mover los labios sin hablar puede resultar extraño al principio, y alguien muy cerca podría notarlo.</li>
+            </ul>
+        </section>
+
+        <!-- ===== 11. MÁS INFORMACIÓN ===== -->
+        <section id="mas-info" class="seccion seccion-alterna">
+            <p class="antetitulo">08 · Enlaces</p>
+            <h2>Más información</h2>
+            <div class="enlaces">
+                <a class="enlace" href="https://subvocal.company/" target="_blank" rel="noopener">
+                    <span class="enlace-titulo">Web oficial de Subvocal</span>
+                    <span class="enlace-url">subvocal.company</span>
+                </a>
+                <a class="enlace" href="https://subvocal.company/preorder" target="_blank" rel="noopener">
+                    <span class="enlace-titulo">Página de reserva</span>
+                    <span class="enlace-url">subvocal.company/preorder</span>
+                </a>
+                <a class="enlace" href="https://emergent.sh/news/subvocal-silent-speech-glasses-launch-yc-f26" target="_blank" rel="noopener">
+                    <span class="enlace-titulo">Noticia del lanzamiento</span>
+                    <span class="enlace-url">emergent.sh</span>
+                </a>
+                <a class="enlace" href="https://www.eesel.ai/blog/subvocal" target="_blank" rel="noopener">
+                    <span class="enlace-titulo">Análisis detallado</span>
+                    <span class="enlace-url">eesel.ai</span>
+                </a>
+                <a class="enlace" href="https://www.invenglobal.com/articles/28053/the-mouth-is-faster-than-hands-glasses-that-type-200-words-a-minute-just-by-moving-your-mouth-silently" target="_blank" rel="noopener">
+                    <span class="enlace-titulo">Reportaje en Inven Global</span>
+                    <span class="enlace-url">invenglobal.com</span>
+                </a>
+                <a class="enlace" href="https://en.wikipedia.org/wiki/Subvocal_recognition" target="_blank" rel="noopener">
+                    <span class="enlace-titulo">Historia del habla silenciosa</span>
+                    <span class="enlace-url">wikipedia.org</span>
+                </a>
+            </div>
+        </section>
+
+    <!-- ===== 12. PIE DE PÁGINA ===== -->
+    </main>
+
+    <footer class="pie">
+        <p><strong>Trabajo de Interacción Persona-Ordenador</strong> · Miguel Chinchilla Corbacho · 2026</p>
+        <p class="pie-nota">Los textos son de elaboración propia a partir de las fuentes enlazadas. Las imágenes pertenecen a sus autores.</p>
+        <a href="#inicio" class="volver">↑ Volver arriba</a>
+    </footer>
+
+</body>
+</html>

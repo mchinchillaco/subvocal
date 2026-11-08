@@ -1,0 +1,759 @@
+/* ===== 1. VARIABLES (colores, tipografías y medidas) ===== */
+:root {
+    --fondo: #0b0c14;
+    --fondo-alterno: #11131f;
+    --superficie: #181b2b;
+    --borde: #2a2e45;
+    --texto: #eceaf4;
+    --texto-suave: #a5a8bd;
+    --acento: #8b7cff;
+    --acento-2: #4fd1c5;
+    --degradado: linear-gradient(120deg, #b3a8ff 0%, #8b7cff 45%, #4fd1c5 100%);
+    --fuente-titulos: "Sora", "Segoe UI", Arial, sans-serif;
+    --fuente-texto: "Inter", "Segoe UI", Arial, sans-serif;
+    --radio: 18px;
+    --ancho-max: 1120px;
+    --alto-menu: 72px;
+}
+
+/* ===== 2. ESTILOS BASE ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--fondo);
+    color: var(--texto);
+    font-family: var(--fuente-texto);
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: var(--fuente-titulos);
+    line-height: 1.2;
+}
+
+strong {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ===== 3. MENÚ SUPERIOR ===== */
+.cabecera {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: var(--alto-menu);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    background-color: rgba(11, 12, 20, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--borde);
+}
+
+.logo {
+    font-family: var(--fuente-titulos);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.logo span {
+    color: var(--acento);
+}
+
+.menu ul {
+    display: flex;
+    gap: 4px;
+    list-style: none;
+}
+
+.menu a {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--texto-suave);
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.menu a:hover {
+    background-color: var(--superficie);
+    color: var(--acento-2);
+}
+
+/* ===== 4. PORTADA (HERO) ===== */
+.hero {
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    min-height: calc(100vh - var(--alto-menu));
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 56px;
+    padding: 64px 5%;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 22px;
+    border: 1px solid var(--acento-2);
+    border-radius: 999px;
+    color: var(--acento-2);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.hero h1 {
+    font-size: clamp(3.2rem, 8vw, 6rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+}
+
+.degradado {
+    background: var(--degradado);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitulo {
+    font-size: 1.25rem;
+    color: var(--texto-suave);
+    max-width: 30ch;
+    margin-bottom: 36px;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 999px;
+    background: var(--degradado);
+    color: #0b0c14;
+    font-weight: 600;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(139, 124, 255, 0.4);
+}
+
+.boton-secundario {
+    background: transparent;
+    color: var(--texto);
+    border: 1px solid var(--borde);
+}
+
+.boton-secundario:hover {
+    border-color: var(--acento-2);
+    box-shadow: none;
+}
+
+.hero-imagen {
+    position: relative;
+}
+
+.hero-imagen::before {
+    content: "";
+    position: absolute;
+    inset: -40px;
+    z-index: -1;
+    border-radius: 50%;
+    background: repeating-radial-gradient(circle, rgba(79, 209, 197, 0.16) 0 2px, transparent 2px 34px);
+}
+
+.hero-imagen img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 32px;
+    border: 1px solid var(--borde);
+    background-color: var(--superficie);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+
+/* ===== 5. SECCIONES GENERALES ===== */
+.seccion {
+    max-width: var(--ancho-max);
+    margin: 0 auto;
+    padding: 110px 5%;
+    scroll-margin-top: var(--alto-menu);
+}
+
+.seccion-alterna {
+    max-width: none;
+    background-color: var(--fondo-alterno);
+    border-top: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
+    padding-left: max(5%, calc((100% - var(--ancho-max)) / 2 + 5%));
+    padding-right: max(5%, calc((100% - var(--ancho-max)) / 2 + 5%));
+}
+
+.antetitulo {
+    color: var(--acento-2);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.seccion h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 36px;
+}
+
+.intro {
+    max-width: 70ch;
+    color: var(--texto-suave);
+    margin-bottom: 44px;
+}
+
+.subtitulo-seccion {
+    font-size: 1.4rem;
+    margin: 64px 0 24px;
+}
+
+.texto p {
+    color: var(--texto-suave);
+    margin-bottom: 18px;
+}
+
+/* ===== 6. DOS COLUMNAS, FOTOS Y CAJAS DE TEXTO ===== */
+.dos-columnas {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 56px;
+    align-items: center;
+}
+
+.dos-columnas-texto {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-items: stretch;
+    margin-top: 48px;
+}
+
+.foto img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--radio);
+    border: 1px solid var(--borde);
+    background-color: var(--superficie);
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 0.82rem;
+    color: var(--texto-suave);
+    text-align: center;
+}
+
+.destacado {
+    margin-top: 28px;
+    padding: 20px 24px;
+    border-left: 4px solid var(--acento);
+    border-radius: 0 var(--radio) var(--radio) 0;
+    background-color: var(--superficie);
+    font-family: var(--fuente-titulos);
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+
+.caja-info {
+    padding: 26px 28px;
+    border-radius: var(--radio);
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+}
+
+.caja-info h3 {
+    color: var(--acento-2);
+    margin-bottom: 8px;
+}
+
+.caja-info p {
+    color: var(--texto-suave);
+}
+
+/* ===== 7. TARJETAS DE BENEFICIOS ===== */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.tarjeta {
+    padding: 30px 26px;
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    border-color: var(--acento);
+}
+
+.icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: var(--degradado);
+    color: #0b0c14;
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+}
+
+.tarjeta h3 {
+    font-size: 1.12rem;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    color: var(--texto-suave);
+    font-size: 0.96rem;
+}
+
+.tarjetas-mejoras {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ===== 8. TARJETAS DE NOVEDAD (ANTES / AHORA) ===== */
+.novedades {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.novedad {
+    padding: 30px 28px;
+    border-radius: var(--radio);
+    border: 1px solid var(--borde);
+    background: linear-gradient(160deg, var(--superficie) 0%, var(--fondo) 100%);
+}
+
+.novedad h3 {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+}
+
+.antes,
+.ahora {
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+}
+
+.antes {
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.03);
+    color: var(--texto-suave);
+}
+
+.ahora {
+    background-color: rgba(79, 209, 197, 0.1);
+    border: 1px solid rgba(79, 209, 197, 0.35);
+}
+
+.antes span,
+.ahora span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.antes span {
+    color: #7d8098;
+}
+
+.ahora span {
+    color: var(--acento-2);
+}
+
+/* ===== 9. PASOS DEL FUNCIONAMIENTO ===== */
+.pasos {
+    list-style: none;
+    counter-reset: paso;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.pasos li {
+    counter-increment: paso;
+    position: relative;
+    padding: 64px 20px 24px;
+    border-radius: var(--radio);
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+}
+
+.pasos li::before {
+    content: counter(paso);
+    position: absolute;
+    top: 18px;
+    left: 20px;
+    font-family: var(--fuente-titulos);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--acento);
+}
+
+.pasos li::after {
+    content: "→";
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    color: var(--acento-2);
+    font-size: 1.2rem;
+}
+
+.pasos li:last-child::after {
+    content: none;
+}
+
+/* ===== 10. TABLA DE CARACTERÍSTICAS ===== */
+.tabla-contenedor {
+    overflow-x: auto;
+    border-radius: var(--radio);
+    border: 1px solid var(--borde);
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--superficie);
+}
+
+.tabla th,
+.tabla td {
+    padding: 16px 22px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+}
+
+.tabla th {
+    background-color: #22263b;
+    color: var(--acento-2);
+    font-family: var(--fuente-titulos);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tabla td:first-child {
+    width: 28%;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.tabla td {
+    color: var(--texto-suave);
+}
+
+.tabla tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla tbody tr:hover {
+    background-color: #20243a;
+}
+
+/* ===== 11. LÍNEA TEMPORAL ===== */
+.sustituye {
+    padding: 28px 30px;
+    border-radius: var(--radio);
+    background: linear-gradient(120deg, rgba(139, 124, 255, 0.14), rgba(79, 209, 197, 0.08));
+    border: 1px solid var(--borde);
+}
+
+.sustituye h3 {
+    margin-bottom: 8px;
+    color: var(--acento);
+}
+
+.sustituye p {
+    color: var(--texto-suave);
+}
+
+.linea-tiempo {
+    list-style: none;
+    position: relative;
+    margin-left: 12px;
+    padding-left: 40px;
+    border-left: 2px solid var(--borde);
+}
+
+.linea-tiempo li {
+    position: relative;
+    margin-bottom: 44px;
+}
+
+.linea-tiempo li::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: var(--fondo-alterno);
+    border: 3px solid var(--acento-2);
+}
+
+.linea-tiempo li.actual::before {
+    background-color: var(--acento);
+    border-color: var(--acento);
+    box-shadow: 0 0 0 6px rgba(139, 124, 255, 0.3);
+}
+
+.fecha {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--acento-2);
+}
+
+.linea-tiempo li.actual .fecha {
+    color: var(--acento);
+}
+
+.linea-tiempo h3 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+}
+
+.linea-tiempo p {
+    color: var(--texto-suave);
+    max-width: 70ch;
+}
+
+.foto-pequena {
+    max-width: 340px;
+    margin-top: 18px;
+}
+
+.foto-pequena figcaption {
+    text-align: left;
+}
+
+/* ===== 12. LISTA DE LIMITACIONES ===== */
+.lista-limitaciones {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+}
+
+.lista-limitaciones li {
+    position: relative;
+    padding: 18px 22px 18px 58px;
+    border-radius: var(--radio);
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    color: var(--texto-suave);
+}
+
+.lista-limitaciones li::before {
+    content: "!";
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: rgba(139, 124, 255, 0.2);
+    color: var(--acento);
+    font-weight: 800;
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* ===== 13. ENLACES DE MÁS INFORMACIÓN ===== */
+.enlaces {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.enlace {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 24px;
+    border-radius: var(--radio);
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    transition: border-color 0.25s, transform 0.25s;
+}
+
+.enlace:hover {
+    border-color: var(--acento-2);
+    transform: translateY(-4px);
+}
+
+.enlace-titulo {
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+}
+
+.enlace-titulo::after {
+    content: " ↗";
+    color: var(--acento-2);
+}
+
+.enlace-url {
+    font-size: 0.88rem;
+    color: var(--texto-suave);
+}
+
+/* ===== 14. PIE DE PÁGINA ===== */
+.pie {
+    padding: 48px 5%;
+    text-align: center;
+    border-top: 1px solid var(--borde);
+    color: var(--texto-suave);
+    font-size: 0.92rem;
+}
+
+.pie-nota {
+    margin-top: 6px;
+    font-size: 0.85rem;
+}
+
+.volver {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--acento-2);
+    font-weight: 600;
+}
+
+.volver:hover {
+    text-decoration: underline;
+}
+
+/* ===== 15. ADAPTACIÓN A TABLETS Y MÓVILES (RESPONSIVE) ===== */
+@media (max-width: 1100px) {
+    .menu {
+        margin-left: 16px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .menu a {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hero,
+    .dos-columnas {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: auto;
+        text-align: center;
+    }
+
+    .subtitulo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-botones {
+        justify-content: center;
+    }
+
+    .hero-imagen {
+        max-width: 460px;
+        margin: 0 auto;
+    }
+
+    .tarjetas,
+    .enlaces,
+    .tarjetas-mejoras,
+    .pasos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pasos li::after {
+        content: none;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    .seccion {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .tarjetas,
+    .enlaces,
+    .tarjetas-mejoras,
+    .pasos,
+    .novedades,
+    .dos-columnas-texto {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-imagen::before {
+        inset: -16px;
+    }
+
+    .tabla th,
+    .tabla td {
+        padding: 12px 14px;
+    }
+}
